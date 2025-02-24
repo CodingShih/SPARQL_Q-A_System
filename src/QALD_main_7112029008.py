@@ -1,5 +1,4 @@
-# 1107 大躍進，TM的直接把答案和問題都遷入了 ，這樣不行，問只要不是給範例的題目，就完了
-# 另外，不同人名或 之前慢慢建立SPARQL的程式碼 可以參考
+
 
 from SPARQLWrapper import SPARQLWrapper, JSON 
 
