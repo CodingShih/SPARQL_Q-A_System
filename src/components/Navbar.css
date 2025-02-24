@@ -1,0 +1,144 @@
+/* Navbar.css */
+.navbar {
+  background: #333;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2; /* Add this line */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.navbar-logo {
+  color: white;/*#9b7300*/
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+}
+
+.burger-bar {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Centered middle bar */
+.burger-bar:nth-child(2) {
+  margin: 6px 0;
+}
+
+/* X animation for burger menu */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.burger-bar.clicked:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background: #333;
+  width: 250px;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.nav-menu.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  transition: all 0.2s ease-out;
+}
+
+.nav-links:hover {
+  background-color: #552929;
+}
+
+@media screen and (min-width: 1561px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+    width: auto;
+    opacity: 1;
+    transform: none;
+    padding: 0;
+    background: none;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    width: auto;
+    padding: 0;
+  }
+
+  .nav-links {
+    padding: 0.5rem 1rem;
+  }
+}

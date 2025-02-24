@@ -1,0 +1,132 @@
+/* src/App.css */
+.main-content {
+  padding-top: 80px; /* Height of the navbar */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*home 首頁*/
+.home-container {
+  position: relative;
+  height: calc(100vh - 80px); /* Adjust based on your navbar height */
+  overflow: hidden;
+  margin-top: 120px;
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Change this from 0 to -1 */
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  color: #d6a742;
+  text-align: center;
+}
+
+
+/* QAForm */
+.qa-container {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+
+.qa-container h1 {
+  margin-bottom: 20px;
+}
+
+.qa-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+
+
+.qa-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 5px; /* Adds spacing between input and button */
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 88%;
+  margin-top: 5px;
+}
+
+.submit-container button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.loading-animation {
+  font-size: 1.2em;
+  color: #a01919;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.answer-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 6px solid #8c3e3e;
+  font-size: 1.4em;
+  overflow-x: auto;/* Enables horizontal scrolling if content overflows */
+  word-wrap: break-word;/* Breaks long words to prevent overflow */
+  text-align:left /*文字靠左*/
+
+}
+
+
+
